@@ -12,8 +12,7 @@ date_default_timezone_set("Asia/Ho_Chi_Minh");
 |	http://example.com/
 |
 | WARNING: You MUST set this value!
-|
-| If it is not set, then CodeIgniter will try guess the protocol and path
+|| If it is not set, then CodeIgniter will try guess the protocol and path
 | your installation, but due to security concerns the hostname will be set
 | to $_SERVER['SERVER_ADDR'] if available, or localhost otherwise.
 | The auto-detection mechanism exists only for convenience during
