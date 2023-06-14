@@ -19,7 +19,7 @@
                     <img src="public/images/smart-mobi2.png" style="width: 100%;" class="img-fix f-logo" alt="smart-construction">
                 </a>
                 <div class="about-store">
-                 Shop Smart phone. Chất lượng - giá cả hợp lý
+                 Cường Thuận Store. Chất lượng - giá cả hợp lý
              </div>
          </div>
          <div class="col-xs-12 col-sm-6">
@@ -28,15 +28,15 @@
                 <ul class="list-unstyled">
                     <li class="clearfix">
                         <i class="fa fa-map-marker"></i>
-                        <span>33 Trần Xuân Soạn, Quận 7, TPHCM</span>
+                        <span>54 P. Triều Khúc, Thanh Xuân Nam, Thanh Xuân, Hà Nội</span>
                     </li>
                     <li class="clearfix">
                         <i class="fa fa-phone"></i>
-                        <span>0978651616 - 0981.334455</span>
+                        <span>024 3854 4264</span>
                     </li>
                     <li class="clearfix">
                         <i class="fa fa-envelope"></i>
-                        <span><a href="mailto:vanhiepp1998@gmail.com">vanhiepp1998@gmail.com</a></span>
+                        <span><a href="mailto:vanhiepp1998@gmail.com">luongtopp@gmail.com</a></span>
                     </li>
                 </ul>
             </div>

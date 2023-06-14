@@ -6,10 +6,10 @@
     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 search">
       <div class="contact-row">
         <div class="phone inline">
-          <i class="icon fa fa-phone"></i> (87) 888 888 868
+          <!-- <i class="icon fa fa-phone"></i> (87) 888 888 868 -->
         </div>
         <div class="contact inline">
-          <i class="icon fa fa-envelope"></i> sale.smart.store.2019@gmail.com
+          <!-- <i class="icon fa fa-envelope"></i> sale.smart.store.2019@gmail.com -->
         </div>
       </div>
       <form action="search" method="get" role="form">

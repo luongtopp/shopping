@@ -61,9 +61,7 @@
         <!--CONTENT-->
         <?php 
             if(isset($com,$view)){
-                echo $com;
-                echo "\n" ;
-                echo $view;
+              
                 $this->load->view('frontend/components/'.$com.'/'.$view);
                
             }

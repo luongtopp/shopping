@@ -195,31 +195,7 @@
     </div>
 </div>
 
-<div class="home-blog">
-    <div class="container">
-        <div class="row-p">
-            <div class="text-center">
-                <h2 class="sectin-title title title-blue">Tin tức công nghệ</h2>
-            </div>
-        </div>
-        <div class="blog-content">
-            <?php
-            $listBaiViet = $this->Mcontent->content_list_home(6, 'all');
-            foreach ($listBaiViet as $rowPost) : ?>
-                <div class="col-xs-12 col-12 col-sm-6 col-md-4 col-lg-4" style="margin: 5px;">
-                    <div class="latest">
-                        <a href="tin-tuc/<?php echo $rowPost['alias'] ?>">
-                            <div class="tempvideo">
-                                <img width="98%" src="public/images/posts/<?php echo $rowPost['img'] ?>">
-                            </div>
-                            <h3 style="color: #999;"><?php echo $rowPost['title'] ?></h3>
-                        </a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</div>
+
 <div class="adv">
     <section id="service" style="margin: 20px;">
         <div class="container">

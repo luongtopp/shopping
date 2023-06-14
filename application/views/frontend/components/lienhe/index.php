@@ -48,7 +48,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="col-md-4 col-12">
+		<div class="col-md-5 col-12">
 			<div class="f-contact" style="
 			padding-left: 32px;
 			">
@@ -56,15 +56,15 @@
 			<ul class="list-unstyled">
 				<li class="clearfix">
 					<i class="fa fa-map-marker fa-1x" style="color:#0f9ed8; padding: 20px; "></i>
-					<span style="color: black"> 33 Trần Xuân Soạn, Q7, TP.HCM</span><br>
+					<span style="color: black">54 P. Triều Khúc, Thanh Xuân Nam, Thanh Xuân, Hà Nội</span><br>
 				</li>
 				<li class="clearfix">
 					<i class="fa fa-phone fa-1x" style="color:#0f9ed8;padding: 20px;  "></i>
-					<span style="color: black">08.335588 - 0981.33557</span>
+					<span style="color: black">024 3854 4264</span>
 				</li>
 				<li class="clearfix">
 					<i class="fa fa-envelope fa-1x " style="color:#0f9ed8; padding: 20px; "></i>
-					<span style="color: black"><a href="mailto:sale.24hstore@gmail.com">sale.smartstore@gmail.com</a></span>
+					<span style="color: black"><a href="mailto:sale.24hstore@gmail.com">sale.cuongthuanstore@gmail.com</a></span>
 				</li>
 			</ul>
 		</div>
@@ -73,7 +73,7 @@
 	<div class="col-md-12 col-lg-12 col-xs-12 col-12">
 
 		<div style="margin-top: 15px;">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3919.775145735074!2d106.70436431428682!3d10.75180526258894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1559320476029!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1955509672243!2d105.79625707528375!3d20.984796989287098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc6bdc7f95f%3A0x58ffc66343a45247!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgR2lhbyB0aMO0bmcgVuG6rW4gdOG6o2k!5e0!3m2!1svi!2sus!4v1686710067205!5m2!1svi!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
