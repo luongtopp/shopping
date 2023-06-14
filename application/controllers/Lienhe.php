@@ -35,7 +35,7 @@ class Lienhe extends CI_Controller {
 			$this->Mcontact->contact_insert($mydata);
 			echo '<script>alert("Tin nhắn của bạn đã gửi đi thành công !")</script>';
 		}
-		$this->data['title']="Smart Store - Liên hệ";
+		$this->data['title']="Cường Thuận Store - Liên hệ";
 		$this->data['view']='index';
 		$this->load->view('frontend/layout',$this->data);
 	}

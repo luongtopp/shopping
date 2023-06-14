@@ -68,7 +68,7 @@ class Mcategory extends CI_Model {
         return $row['name'];
 	}
 	// Lấy lên danh sách danh mục
-	public function category_list()
+	public function category_list() 
 	{
 		$this->db->where('trash',1);
 		$this->db->order_by('orders', 'asc');
@@ -101,7 +101,7 @@ class Mcategory extends CI_Model {
 
 	public function category_trash_count()
 	{
-        $this->db->where('trash', 0);
+        $this->db->where('trash', 0); 
         $query = $this->db->get($this->table);
         return count($query->result_array());
 	}

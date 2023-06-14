@@ -22,7 +22,7 @@ class Thongtin extends CI_Controller {
     }
     
     public function index(){
-        $this->data['title']='Smart Store - Thông tin tài khoản';
+        $this->data['title']='Cường Thuận Store - Thông tin tài khoản';
         $this->data['view']='index';
         $this->load->view('frontend/layout',$this->data);
     }
@@ -34,7 +34,7 @@ class Thongtin extends CI_Controller {
         $priceShip=$this->Mconfig->config_price_ship();
         $this->data['row'] = $this->Morderdetail->orderdetail_order_join_product($id);
         $this->data['info']=$this->Minfocustomer->order_orderid($id);
-        $this->data['title']='Smart Store - Chi tiết đơn hàng';  
+        $this->data['title']='Cường Thuận Store - Chi tiết đơn hàng';  
         $this->data['view']='detail';
         $this->load->view('frontend/layout',$this->data);
     }
@@ -60,7 +60,7 @@ class Thongtin extends CI_Controller {
            echo '<script>alert("Mật khẩu đã được thay đổi thành công !")</script>';
            redirect('thong-tin-khach-hang','refresh');
        }
-       $this->data['title']='Smart Store - Đổi mật khẩu';
+       $this->data['title']='Cường Thuận Store - Đổi mật khẩu';
        $this->data['view']='reset_password';
        $this->load->view('frontend/layout',$this->data);
    }

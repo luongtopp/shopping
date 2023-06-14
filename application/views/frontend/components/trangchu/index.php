@@ -1,143 +1,139 @@
 <section id="menu-slider">
     <div class="slider">
         <div class="container">
-           <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 list-menu pull-left" style="height: 321px;">
-             <img style="width: 100%; height: 160px;" src="public/images/Right-banner.png">
-             <img style="width: 100%; height: 160px;" src="public/images/banner2.png">
-         </div>
-         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 slider-main pull-left">
-            <?php 
-            $this->load->view('frontend/modules/slider');
-            ?>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-main pull-left">
+                <?php
+                $this->load->view('frontend/modules/slider');
+                ?>
+            </div>
         </div>
     </div>
-</div>
-<div class="container" style="margin-top: 20px;">
-    <div class="sale-title">
-        <span>SẢN PHẨM KHUYẾN MÃI HOT</span>
+    <div class="container" style="margin-top: 20px;">
+        <div class="sale-title">
+            <span>SẢN PHẨM KHUYẾN MÃI HOT</span>
+        </div>
     </div>
-</div>
-<div class="container" style="margin-bottom: 20px;">
-    <div class="owl-carousel owl-carousel-product owl-theme" style="border: 1px solid #0f9ed8;">
-        <?php 
-        $product_sale = $this->Mproduct->product_sale(10);
-        foreach ($product_sale as $row) :?>
-            <div class="item" style="margin: 0px;">
-                <div class="products-sale">
-                    <div class="lt-product-group-image">
-                        <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" >
-                            <img class="img-p"src="public/images/products/<?php echo $row['avatar'] ?>" alt="">
-                        </a>
+    <div class="container" style="margin-bottom: 20px;">
+        <div class="owl-carousel owl-carousel-product owl-theme" style="border: 1px solid #0f9ed8;">
+            <?php
+            $product_sale = $this->Mproduct->product_sale(10);
+            foreach ($product_sale as $row) : ?>
+                <div class="item" style="margin: 0px;">
+                    <div class="products-sale">
+                        <div class="lt-product-group-image">
+                            <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>">
+                                <img class="img-p" src="public/images/products/<?php echo $row['avatar'] ?>" alt="">
+                            </a>
 
-                        <?php if($row['sale'] > 0) :?>
-                            <div class="giam-percent">
-                                <span class="text-giam-percent">Giảm <?php echo $row['sale'] ?>%</span>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="lt-product-group-info">
-                        <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" style="text-align: left;">
-                            <h3><?php echo $row['name'] ?></h3>
-                        </a>
-                        <div class="price-box">
-                            <?php if($row['sale'] > 0) :?>
-
-                                <p class="old-price">
-                                    <span class="price"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                                <p class="special-price">
-                                    <span class="price"><?php echo(number_format($row['price_sale'])); ?>₫</span>
-                                </p>
-                                <?php else: ?>
-                                 <p class="old-price">
-                                    <span class="price" style="color: #fff"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                                <p class="special-price">
-                                    <span class="price"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                            <?php endif;?>
+                            <?php if ($row['sale'] > 0) : ?>
+                                <div class="giam-percent">
+                                    <span class="text-giam-percent">Giảm <?php echo $row['sale'] ?>%</span>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                        <div class="clear"></div>
+                        <div class="lt-product-group-info">
+                            <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" style="text-align: left;">
+                                <h3><?php echo $row['name'] ?></h3>
+                            </a>
+                            <div class="price-box">
+                                <?php if ($row['sale'] > 0) : ?>
+
+                                    <p class="old-price">
+                                        <span class="price"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                    <p class="special-price">
+                                        <span class="price"><?php echo (number_format($row['price_sale'])); ?>₫</span>
+                                    </p>
+                                <?php else : ?>
+                                    <p class="old-price">
+                                        <span class="price" style="color: #fff"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                    <p class="special-price">
+                                        <span class="price"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
 
-<div class="container" style="margin-top: 20px;">
-    <div class="sale-title">
-        <span>SẢN PHẨM BÁN CHẠY</span>
+    <div class="container" style="margin-top: 20px;">
+        <div class="sale-title">
+            <span>SẢN PHẨM BÁN CHẠY</span>
+        </div>
     </div>
-</div>
-<div class="container" style="margin-bottom: 20px;">
-    <div class="owl-carousel owl-carousel-product owl-theme" style="border: 1px solid #0f9ed8;">
-        <?php 
-        $product_sale = $this->Mproduct->product_selling(10);
-        foreach ($product_sale as $row) :?>
-            <div class="item" style="margin: 0px;">
-                <div class="products-sale">
-                    <div class="lt-product-group-image">
-                        <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" >
-                            <img class="img-p"src="public/images/products/<?php echo $row['avatar'] ?>" alt="">
-                        </a>
-                        <?php if($row['sale'] > 0) :?>
-                            <div class="giam-percent">
-                                <span class="text-giam-percent">Giảm <?php echo $row['sale'] ?>%</span>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="lt-product-group-info">
-                        <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" style="text-align: left;">
-                            <h3><?php echo $row['name'] ?></h3>
-                        </a>
-                        <div class="price-box">
-                            <?php if($row['sale'] > 0) :?>
-
-                                <p class="old-price">
-                                    <span class="price"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                                <p class="special-price">
-                                    <span class="price"><?php echo(number_format($row['price_sale'])); ?>₫</span>
-                                </p>
-                                <?php else: ?>
-                                 <p class="old-price">
-                                    <span class="price" style="color: #fff"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                                <p class="special-price">
-                                    <span class="price"><?php echo(number_format($row['price'])); ?>₫</span>
-                                </p>
-                            <?php endif;?>
+    <div class="container" style="margin-bottom: 20px;">
+        <div class="owl-carousel owl-carousel-product owl-theme" style="border: 1px solid #0f9ed8;">
+            <?php
+            $product_sale = $this->Mproduct->product_selling(10);
+            foreach ($product_sale as $row) : ?>
+                <div class="item" style="margin: 0px;">
+                    <div class="products-sale">
+                        <div class="lt-product-group-image">
+                            <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>">
+                                <img class="img-p" src="public/images/products/<?php echo $row['avatar'] ?>" alt="">
+                            </a>
+                            <?php if ($row['sale'] > 0) : ?>
+                                <div class="giam-percent">
+                                    <span class="text-giam-percent">Giảm <?php echo $row['sale'] ?>%</span>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                        <div class="clear"></div>
+                        <div class="lt-product-group-info">
+                            <a href="<?php echo $row['alias'] ?>" title="<?php echo $row['name'] ?>" style="text-align: left;">
+                                <h3><?php echo $row['name'] ?></h3>
+                            </a>
+                            <div class="price-box">
+                                <?php if ($row['sale'] > 0) : ?>
+
+                                    <p class="old-price">
+                                        <span class="price"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                    <p class="special-price">
+                                        <span class="price"><?php echo (number_format($row['price_sale'])); ?>₫</span>
+                                    </p>
+                                <?php else : ?>
+                                    <p class="old-price">
+                                        <span class="price" style="color: #fff"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                    <p class="special-price">
+                                        <span class="price"><?php echo (number_format($row['price'])); ?>₫</span>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
 </section>
 
 </section>
 <div id="content">
     <div class="container">
-        <?php 
-        $listCategory=$this->Mcategory->category_list(0,'10');
-        foreach ($listCategory as $rowCategory):
+        <?php
+        $listCategory = $this->Mcategory->category_list(0, '10');
+        foreach ($listCategory as $rowCategory) :
             // row dien thoai
-            $subCategory=$this->Mcategory->category_list($rowCategory['id'],'10');
+            $subCategory = $this->Mcategory->category_list($rowCategory['id'], '10');
             // Id dien thoai
-            $catId=$this->Mcategory->category_id($rowCategory['link']);
+            $catId = $this->Mcategory->category_id($rowCategory['link']);
             // list id dt ss, apple,...
-            $listCatId=$this->Mcategory->category_listcat($catId);
+            $listCatId = $this->Mcategory->category_listcat($catId);
             // list dt ss, apple
-            $listProducts=$this->Mproduct->product_home_limit($listCatId,10);
-            if((count($listProducts) >= 3)):?>
+            $listProducts = $this->Mproduct->product_home_limit($listCatId, 10);
+            if ((count($listProducts) >= 3)) : ?>
                 <div class="list-product">
                     <div class="list-header-z">
-                        <h2><a href="<?php echo  $rowCategory['link']?>"><?php echo  $rowCategory['name']?> nổi bật</a></h2>
+                        <h2><a href="<?php echo  $rowCategory['link'] ?>"><?php echo  $rowCategory['name'] ?> nổi bật</a></h2>
                         <ul class="sub-category">
-                            <?php foreach ($subCategory as $rowSubCategory) :?>
+                            <?php foreach ($subCategory as $rowSubCategory) : ?>
                                 <li>
                                     <a href="san-pham/<?php echo $rowSubCategory['link'] ?>" ' 
                                         title="<?php echo $rowSubCategory['name'] ?>"
@@ -150,7 +146,7 @@
                         </ul>
                     </div>
                     <div class="product-container">
-                        <?php foreach ($listProducts as $sp) :?>
+                        <?php foreach ($listProducts as $sp) : ?>
                             <div class="p-box-5">
                                 <div class="product-lt">
                                     <div class="lt-product-group-image">
@@ -158,7 +154,7 @@
                                             <img class="img-p"src="public/images/products/<?php echo $sp['avatar'] ?>" alt="">
                                         </a>
 
-                                        <?php if($sp['sale'] > 0) :?>
+                                        <?php if ($sp['sale'] > 0) : ?>
                                             <div class="giam-percent">
                                                 <span class="text-giam-percent">Giảm <?php echo $sp['sale'] ?>%</span>
                                             </div>
@@ -170,32 +166,32 @@
                                             <h3><?php echo $sp['name'] ?></h3>
                                         </a>
                                         <div class="price-box">
-                                            <?php if($sp['sale'] > 0) :?>
+                                            <?php if ($sp['sale'] > 0) : ?>
 
                                                 <p class="old-price">
-                                                    <span class="price"><?php echo(number_format($sp['price'])); ?>₫</span>
+                                                    <span class="price"><?php echo (number_format($sp['price'])); ?>₫</span>
                                                 </p>
                                                 <p class="special-price">
-                                                    <span class="price"><?php echo(number_format($sp['price_sale'])); ?>₫</span>
+                                                    <span class="price"><?php echo (number_format($sp['price_sale'])); ?>₫</span>
                                                 </p>
-                                                <?php else: ?>
+                                                <?php else : ?>
                                                  <p class="old-price">
-                                                    <span class="price" style="color: #fff"><?php echo(number_format($sp['price'])); ?>₫</span>
+                                                    <span class="price" style="color: #fff"><?php echo (number_format($sp['price'])); ?>₫</span>
                                                 </p>
                                                 <p class="special-price">
-                                                    <span class="price"><?php echo(number_format($sp['price'])); ?>₫</span>
+                                                    <span class="price"><?php echo (number_format($sp['price'])); ?>₫</span>
                                                 </p>
-                                            <?php endif;?>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="clear"></div>
                                     </div>
                                 </div>
                             </div>
-                        <?php endforeach;?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-            <?php endif;?>
-        <?php endforeach;?>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 
@@ -207,9 +203,9 @@
             </div>
         </div>
         <div class="blog-content">
-            <?php  
-            $listBaiViet=$this->Mcontent->content_list_home(6, 'all');
-            foreach ($listBaiViet as $rowPost) :?>
+            <?php
+            $listBaiViet = $this->Mcontent->content_list_home(6, 'all');
+            foreach ($listBaiViet as $rowPost) : ?>
                 <div class="col-xs-12 col-12 col-sm-6 col-md-4 col-lg-4" style="margin: 5px;">
                     <div class="latest">
                         <a href="tin-tuc/<?php echo $rowPost['alias'] ?>">
@@ -281,4 +277,3 @@
     <!--Begin-->
     <!--End-->
 </div>
-

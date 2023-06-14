@@ -3,14 +3,15 @@
 		<h1><i class="glyphicon glyphicon-cd"></i> Danh mục loại sản phẩm</h1>
 		<div class="breadcrumb">
 			<?php
-			if($user['role']==1){
-				echo '<a class="btn btn-primary btn-sm" href="'.base_url().'admin/category/insert" role="button">
+			if ($user['role'] == 1) {
+				echo '<a class="btn btn-primary btn-sm" href="' . base_url() . 'admin/category/insert" role="button">
 				<span class="glyphicon glyphicon-plus"></span> Thêm mới
 				</a>';
 			}
 			?>
 			<a class="btn btn-primary btn-sm" href="admin/category/recyclebin" role="button">
-				<span class="glyphicon glyphicon-trash"></span> Thùng rác (<?php $total=$this->Mcategory->category_trash_count(); echo $total; ?>)
+				<span class="glyphicon glyphicon-trash"></span> Thùng rác (<?php $total = $this->Mcategory->category_trash_count();
+																			echo $total; ?>)
 			</a>
 		</div>
 	</section>
@@ -21,22 +22,22 @@
 				<div class="box" id="view">
 					<!-- /.box-header -->
 					<div class="box-body">
-						<?php  if($this->session->flashdata('success')):?>
+						<?php if ($this->session->flashdata('success')) : ?>
 							<div class="row">
 								<div class="alert alert-success">
 									<?php echo $this->session->flashdata('success'); ?>
 									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 								</div>
 							</div>
-						<?php  endif;?>
-						<?php  if($this->session->flashdata('error')):?>
+						<?php endif; ?>
+						<?php if ($this->session->flashdata('error')) : ?>
 							<div class="row">
 								<div class="alert alert-error">
 									<?php echo $this->session->flashdata('error'); ?>
 									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 								</div>
 							</div>
-						<?php  endif;?>
+						<?php endif; ?>
 						<div class="row" style='padding:0px; margin:0px;'>
 							<!--ND-->
 							<div class="table-responsive">
@@ -52,52 +53,52 @@
 										</tr>
 									</thead>
 									<tbody>
-										<?php foreach ($list as $row):?>
+										<?php foreach ($list as $row) : ?>
 											<tr>
 												<td class="text-center"><?php echo $row['id'] ?></td>
 												<td>
 													<a href="<?php echo base_url() ?>admin/category/update/<?php echo $row['id'] ?>"><?php echo $row['name'] ?>
-													(<?php $total=$this->Mproduct->product_count_parentid($row['id']); echo $total; ?>)
-												</a>	
-											</td>
-											<td>
-												<?php  
-												$catid = $this->Mcategory->category_parentid($row['id']);
-												$name = $this->Mcategory->category_name_parent($catid);
-												if($catid == 0)
-												{
-													echo '';
-												}
-												else
-												{
-													echo $name;
-												}
-												?>
-											</td>
-											<td class="text-center">
-												<?php echo $row['created_at'] ?>
-											</td>
-											<td class="text-center">
-												<a href="<?php echo base_url() ?>admin/category/status/<?php echo $row['id'] ?>">
-													<?php if($row['status']==1):?>
-														<span class="glyphicon glyphicon-ok-circle mauxanh18"></span>
-														<?php else: ?>
+														(<?php $total = $this->Mproduct->product_count_parentid($row['id']);
+															echo $total; ?>)
+													</a>
+												</td>
+												<!-- Danh mục cha -->
+												<td>
+													<?php
+													$catid = $this->Mcategory->category_parentid($row['id']);
+													if ($catid == 0) {
+														echo '';
+													} else {
+
+														$name = $this->Mcategory->category_name_parent($catid);
+														echo $name;
+													}
+													?>
+												</td>
+												<td class="text-center">
+													<?php echo $row['created_at'] ?>
+												</td>
+												<td class="text-center">
+													<a href="<?php echo base_url() ?>admin/category/status/<?php echo $row['id'] ?>">
+														<?php if ($row['status'] == 1) : ?>
+															<span class="glyphicon glyphicon-ok-circle mauxanh18"></span>
+														<?php else : ?>
 															<span class="glyphicon glyphicon-remove-circle maudo"></span>
 														<?php endif; ?>
 													</a>
 												</td>
 												<?php
-												if($user['role']==1){
+												if ($user['role'] == 1) {
 													echo '<td class="text-center">
-													<a class="btn btn-success btn-xs" href="<?php echo base_url() ?>admin/category/update/'.$row['id'] .'" role = "button">
+													<a class="btn btn-success btn-xs" href="<?php echo base_url() ?>admin/category/update/' . $row['id'] . '" role = "button">
 													<span class="glyphicon glyphicon-edit"></span>Sửa
 													</a>
 													</td>';
 												}
 												?>
-												
+
 												<td class="text-center">
-													<a class="btn btn-danger btn-xs" href="<?php echo base_url() ?>admin/category/trash/<?php echo $row['id'] ?>" onclick="return confirm('Xác nhận xóa loại sản phẩm này ?')" role = "button">
+													<a class="btn btn-danger btn-xs" href="<?php echo base_url() ?>admin/category/trash/<?php echo $row['id'] ?>" onclick="return confirm('Xác nhận xóa loại sản phẩm này ?')" role="button">
 														<span class="glyphicon glyphicon-trash"></span>Xóa
 													</a>
 												</td>

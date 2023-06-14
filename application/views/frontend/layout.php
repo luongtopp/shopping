@@ -12,7 +12,7 @@
             if(isset($title))
                 echo $title;
             else
-                echo "Smart Store - Điện thoại, Laptop, Link kiện chính hãng";
+                echo "Cường Thuận Store - Laptop, Link kiện chính hãng";
         ?>
     </title>
     <link rel="icon" type="image/x-icon" href="public/images/cart2.png">
@@ -61,7 +61,11 @@
         <!--CONTENT-->
         <?php 
             if(isset($com,$view)){
+                echo $com;
+                echo "\n" ;
+                echo $view;
                 $this->load->view('frontend/components/'.$com.'/'.$view);
+               
             }
             else
                 $this->load->view('frontend/components/Error404/index');
