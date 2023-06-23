@@ -110,8 +110,10 @@ $config['rest_realm'] = 'REST API';
 |           authorization key
 |
 */
-$config['rest_auth'] = false;
-// $config['rest_auth'] = 'basic';
+// Nguyen ban
+// $config['rest_auth'] = false;
+// Chinh sua
+$config['rest_auth'] = 'basic';
 
 /*
 |--------------------------------------------------------------------------
@@ -127,7 +129,9 @@ $config['rest_auth'] = false;
 | Note: If 'rest_auth' is set to 'session' then change 'auth_source' to the name of the session variable
 |
 */
+// Nguyen ban 
 // $config['auth_source'] = 'ldap';
+// Chinh sua
 $config['auth_source'] = '';
 
 /*
@@ -300,7 +304,9 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
+// Nguyen ban
 // $config['rest_keys_table'] = 'keys';
+// Chinh sua 
 $config['rest_keys_table'] = 'api_keys';
 
 /*
@@ -326,8 +332,10 @@ $config['rest_keys_table'] = 'api_keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = false;
-// $config['rest_enable_keys'] = true;
+// Nguyen ban 
+// $config['rest_enable_keys'] = false;
+// Chinh sua 
+$config['rest_enable_keys'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -338,7 +346,9 @@ $config['rest_enable_keys'] = false;
 | column name to match e.g. my_key
 |
 */
+// Nguyen ban 
 // $config['rest_key_column'] = 'key';
+// Chinh sua  
 $config['rest_key_column'] = 'my_key';
 
 /*

@@ -132,3 +132,6 @@ $route['(:any)'] = 'sanpham/detail/$1';
 $route['translate_uri_dashes'] = FALSE;
 
 // api 
+$route['api/demo'] = 'api/ApiDemoController/index';
+$route['api/product'] = 'api/ApiProductController/index';
+$route['api/product/store'] = 'api/ApiProductController/storeProduct';

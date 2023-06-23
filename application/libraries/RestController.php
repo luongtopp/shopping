@@ -1,6 +1,8 @@
 <?php
 
 namespace chriskacerguis\RestServer;
+require APPPATH . 'libraries/Format.php';
+
 
 use Exception;
 use RecursiveArrayIterator;

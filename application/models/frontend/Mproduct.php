@@ -5,6 +5,12 @@ class Mproduct extends CI_Model {
         parent::__construct();
         $this->table = $this->db->dbprefix('product');
     }
+    // Lay du lieu san pham
+    public function get_products()
+    {
+        $query = $this->db->get($this->table);
+        return $query->result();
+    }
 
     //Trang chủ
     public function product_home_limit($listcat, $limit)
