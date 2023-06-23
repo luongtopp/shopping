@@ -130,3 +130,4 @@ $route['404_override'] = 'Error404';
 
 $route['(:any)'] = 'sanpham/detail/$1';
 $route['translate_uri_dashes'] = FALSE;
+

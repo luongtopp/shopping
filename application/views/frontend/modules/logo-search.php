@@ -36,7 +36,8 @@
        <div class="cart_header">
         <a href="gio-hang" title="Giỏ hàng">
          <span class="cart_header_icon">
-          <img src="<?php echo base_url() ?>public/images/cart2.png" alt="Cart">
+          <img src="<?php echo base_url() ?>public/images/cart2.png" alt="Cart" style="
+    margin-bottom: 10px;">
         </span>
         <span class="box_text">
           <strong class="cart_header_count">Giỏ hàng <span>(<?php  
